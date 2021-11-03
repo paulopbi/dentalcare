@@ -34,10 +34,10 @@ Github
 
 <h2 align="left"> 
 
-This project is about a dentist company website. <br>
+This project is a dentist company website. <br>
 Build with **HTML**, **CSS**, **JAVASCRIPT** and **Figma** for design!
 
-The website is responsive for mobile devices and big screens, you can check a bit mobile version bellow.
+The website is responsive in mobile devices and big screens, you can check a bit of mobile version bellow.
 </h2>
 
 <h2 align="center">
@@ -70,7 +70,7 @@ The website is responsive for mobile devices and big screens, you can check a bi
 
 <h2 align="left"> 
 
-Este projeto é sobre um website de clinica de dentistas! <br>
+Este projeto é um website de clinica de dentistas! <br>
 Feito com **HTML**, **CSS**, **JAVASCRIPT** e **Figma** para o design!
 
 Este site é responsivo para celulares e telas grandes, você pode ver um pouco da versão mobile abaixo.
