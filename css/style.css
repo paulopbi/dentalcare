@@ -1,0 +1,651 @@
+/**********************************/
+/* Import (Fonts)
+/**********************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/**********************************/
+/* 0. Variables
+/**********************************/
+
+:root {
+    --color-purple: #B112BF;
+    --color-purple-dark: #8A1195;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-off-white: #F3F3F3;
+
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+
+    --card-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.068);
+    --shadow-small: 1px 2px 3px rgba(0, 0, 0, 0.267);
+    --shadow-heading: 2px 2px 2px rgba(0, 0, 0, 0.219);
+
+    --transition: all .3s ease-in-out;
+
+}
+
+/**********************************/
+/* 0. Variables
+/* 1. General Styles
+/* 2. Navbar
+/* 3. Home
+/* 4. Doctors
+/* 5. Clients
+/* 6. Plans
+/* 7. Footer
+/**********************************/
+
+/**********************************/
+/* 1. General Styles
+/**********************************/
+*{  
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    
+    overflow-x: hidden;
+    font-family: var(--font-poppins);
+    background-color: var(--color-off-white);
+}
+
+a, li {
+    text-decoration: none;
+    list-style: none;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: var(--font-montserrat);
+    text-shadow: var(--shadow-small);
+    color: var(--color-purple);
+    text-align: center;
+    margin-top: 3rem;
+}
+
+hr {
+    width: 50%;
+    height: .3rem;
+    background-color: var(--color-purple);
+    border: none;
+    border-radius: 5rem;
+    margin: 1rem auto;
+}
+
+/**********************************/
+/* 2. Navbar
+/**********************************/
+.nav-menu {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 90px;
+    background-color: var(--color-off-white);
+}
+
+.brand {
+    font-family: var(--font-montserrat);
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto;
+    color: var(--color-purple);
+    text-shadow: var(--shadow-heading);
+}
+
+.menu-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+}
+
+.nav__link {
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    padding: 1rem;
+    color: var(--color-black);
+    text-shadow: var(--shadow-small);
+}
+
+.nav__link:hover  {
+    color: var(--color-purple);
+    transition: var(--transition);
+}
+
+.nav-toggle__btn {
+    display: none;
+}
+
+/*Mobile Device Navegation*/
+
+@media screen and (max-width: 480px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 1rem;
+    }
+
+    .nav-menu.active .menu-links {
+        display: block;
+        
+    }
+    
+    .nav-toggle__btn {
+        position: absolute;
+        top: 23px;
+        right: 20px;
+        display: block;
+        margin: 0 auto;
+        padding: 0 1rem;
+        font-size: 1.5rem;
+        background-color: transparent;
+        border: none;
+        color: var(--color-purple);
+        cursor: pointer;
+    }
+
+    .brand {
+        font-family: var(--font-montserrat);
+        display: block;
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .menu-links {
+        
+        display: block; 
+        position: absolute;
+        width: 100%;
+        height: 0;
+        top: 70px;
+        right: 0;
+        transition: .5s all ease;
+        background-color: var(--color-off-white);
+        color: var(--color-black);
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    .nav-menu.active .menu-links{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .nav__link {
+        font-size: 2rem;
+        display: block;
+        margin: 1rem 0;
+    }
+    
+}
+/**********************************/
+/* 3. Home
+/**********************************/
+
+.header-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh; 
+}
+
+.header__heading--margin {
+    margin-top: 6rem;
+}
+
+.header-banner {
+    height: 100%;
+    max-width: 100%;
+    background-image: url('../assets/banner-bg.jpg');
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.89);
+}
+
+.banner__heading {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--color-white);
+    padding: 3rem;
+}
+
+.banner__paragrapy {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 3rem;
+    color: var(--color-white);
+}
+
+.banner__btn {
+    font-family: var(--font-montserrat);
+    font-size: 1.5rem;
+    display: flex;
+    margin: 1rem auto;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 50px;
+    color: var(--color-white);
+    background-color: var(--color-purple-dark);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*Mobile Device Banner*/
+
+@media screen and (max-width: 600px) {
+    .banner__heading {
+        font-size: 2rem;
+        text-align: center;
+        text-transform: capitalize;
+        color: var(--color-white);
+        padding: 1rem;
+        margin: 0 auto;
+    }
+
+    .banner__paragrapy {
+        font-size: 1rem;  
+    }
+    
+    .banner__btn {
+        position: initial;
+        margin: 1rem auto;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .banner__paragrapy {
+        font-size: .9rem;
+        line-height: normal;
+        margin: 1rem;
+        padding: 0;
+    }
+
+    .banner__btn {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+/**********************************/
+/* 4. Doctors
+/**********************************/
+
+.doctors-container {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.doctors-card {
+    display: block;
+    width: 300px;
+    height: 430px;
+    margin: 0 1rem;
+    padding: 1rem;
+    border-radius: 50px;
+    background-color: var(--color-off-white);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+.doctors__img {
+    display: block;
+    max-width: 200px;
+    height: 200px;
+    margin: 1rem auto;
+}
+
+.doctors__heading {
+    font-family: var(--font-montserrat);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.doctors__paragraphy {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.doctors-card-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2.5rem;
+    padding: .5rem;
+}
+
+.doctors__icon {
+    color: var(--color-black);
+    cursor: pointer;
+}
+
+.doctors__icon:hover {
+    transform: scale(1.2);
+    transition: all .3s ease-out;
+    color: var(--color-purple);
+}
+
+/*Mobile Device Doctors*/
+
+@media screen and (max-width: 997px) {
+    .doctors-container {
+        height: 931px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 665px) {
+    .doctors-container {
+        height: 1365px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 664px) {
+    .doctors-container {
+        height: 1325px;
+        width: 100%;
+    }
+
+    .doctors-card-icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 2rem;
+        padding: 0;
+    }
+} 
+
+/**********************************/
+/* 5. Clients
+/**********************************/
+
+.clients-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.clients-card {
+    display: block;
+    width: 400px;
+    height: 300px;
+    padding: 1rem;
+    margin: 1rem 2rem;
+    box-shadow: var(--card-shadow);
+}
+
+.clients__img {
+    display: block;
+    max-width: 100%;
+    margin: 1rem auto;
+}
+
+.clients__review {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: var(--shadow-small);
+}
+
+.clients-banner {
+    width: 350px;
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem auto;
+    border-radius: 70px;
+
+    color: var(--color-white);
+    background-color: var(--color-purple-dark);
+    box-shadow: var(--card-shadow);
+}
+
+.clients-banner-container {
+    display: block;
+    margin: 0 auto;
+}
+
+.client-banner__text {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: var(--shadow-small);
+}
+
+/* Mobile Device Clients*/
+
+@media screen and (max-width: 1391px) {
+    .clients-container {
+        height: 700px;
+    }
+}
+
+@media screen and (max-width: 928px) {
+    .clients-container {
+        display: flex;
+        height: 1000px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .clients__review {
+        font-size: 1rem;
+    }
+}
+
+/**********************************/
+/* 6. Plans
+/**********************************/
+
+.plans-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.plans-card-itens {
+    display: block;
+    margin: 1rem auto;
+}
+
+.plans-card {
+    height: 474px;
+    width: 342px;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: var(--color-off-white);
+    box-shadow: var(--card-shadow);
+}
+
+.plans__heading {
+    font-family: var(--font-montserrat);
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem auto;
+    color: var(--color-purple);
+    text-shadow: var(--shadow-heading);
+}
+
+.plans__price {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.plan__plans {
+    font-size: 1rem;
+    margin: 1rem auto;
+    text-align: left;
+}
+
+.plans__btn {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    background-color: var(--color-purple-dark);
+    padding: .5rem 2rem;
+    border: none;
+    border-radius: 50px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*Mobile Device Plans*/
+
+@media screen and (max-width: 1121px) {
+    .plans-container {
+        height: 1000px;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .plans-container {
+        height: 1510px;
+    }
+}
+
+@media screen and (max-width: 382px) {
+    .plans-container {
+        height: 1613px;
+    }
+    
+    .plans-card {
+        height: 490px;
+        width: 250px;
+        padding: .5rem;
+        margin: 1rem auto;
+    }
+}
+
+/**********************************/
+/* 7. Footer
+/**********************************/
+
+.footer-container {
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: var(--color-purple-dark);
+    color: var(--color-white);
+}
+
+.footer__heading {
+    font-family: var(--font-montserrat);
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.footer__tel {
+    width: 190px;
+    font-size: 1.2rem;
+    display: block;
+    padding: 1rem;
+    color: var(--color-white);
+}
+
+.footer__email {
+    width: 360px;
+    font-size: 1.2rem;
+    display: block;
+    padding: 1rem;
+    color: var(--color-white);
+}
+
+address {
+    font-size: 1.2rem;
+    display: block;
+    padding: 1rem;
+}
+
+.footer-icons {
+    position: absolute;
+    display: flex;
+    top: 50px;
+    right: 30px;
+    flex-direction: column;
+}
+
+.footer__icon {
+    font-size: 2rem;
+    margin: .5rem;
+    color: var(--color-white);
+}
+
+.footer__icon:hover {
+    color: var(--color-black);
+}
+
+.footer__copyright {
+    font-family: var(--font-montserrat);
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/*Mobile Device Footer*/
+
+@media screen and (max-width: 600px) {
+    .footer-itens {
+        text-align: center;
+    }
+    
+    .footer-icons {
+        display: none;
+    }
+
+    .footer__copyright {
+        font-size: 1rem;
+    }
+
+    .footer__tel {
+        width: 100%;
+        font-size: 1.2rem;
+        display: block;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+    
+    .footer__email {
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+}
