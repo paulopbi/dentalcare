@@ -66,7 +66,7 @@ The website is responsive in mobile devices and big screens, you can check a bit
     <img alt="Projeto Gif" title="Gif" src="./assets/HomePage.jpg">
 </h1>
 
-# Português
+# Portugues
 
 <h2 align="left"> 
 
