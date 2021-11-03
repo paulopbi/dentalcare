@@ -4,7 +4,7 @@
 
 <h3 align="center">
 
-[English](#english) • [Português](#portuges) • [Layout](#layout)
+[English](#english) • [Portugues](#portugues) • [Layout](#layout)
 </h3>
 
 <br>
